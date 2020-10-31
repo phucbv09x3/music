@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Music Offline">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/list_music_of_nav"
+                    android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+                    android:title="List Music OffLine" />
+            </group>
+
+        </menu>
+
+    </item>
+
+    <item android:title="Music Online">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/home_music_online_of_nav"
+                    android:icon="@drawable/ic_baseline_home_24"
+                    android:title="Home Music Online" />
+            </group>
+
+        </menu>
+
+    </item>
+</menu>

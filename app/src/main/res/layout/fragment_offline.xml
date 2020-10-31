@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frg_offline"
+    android:background="@drawable/bgof"
+    tools:context=".view.fragment.OfflineFragment">
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rcy_listOffline"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"/>
+</FrameLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/contentFG"
+    android:layout_width="match_parent"
+    android:background="#ffffff"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:id="@+id/content_manager_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/show_play"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/show_play"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        android:background="#3700b3"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/tv_nameMusicShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="My Music xin chào !"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <Button
+            android:id="@+id/btn_lyric"
+            android:background="@drawable/ic_baseline_wrap_text_24"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textAllCaps="false"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="6dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_width="20dp"
+            android:layout_height="20dp"/>
+
+        <TextView
+            android:id="@+id/tv_nameSingerShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Nge nhạc vui vẻ"
+            android:textColor="#ffffff"
+            android:textSize="10dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nameMusicShow" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:text="00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nameSingerShow" />
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:text="00:00"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_nameSingerShow" />
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekBar_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintLeft_toRightOf="@id/tv_time"
+            app:layout_constraintRight_toLeftOf="@id/tv_total_time"
+            app:layout_constraintTop_toBottomOf="@id/tv_nameSingerShow" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_previous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_skip_previous_24"
+            app:layout_constraintRight_toLeftOf="@id/btn_play"
+            app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:foregroundGravity="center_horizontal"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_play_arrow_24"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_baseline_skip_next_24"
+            app:layout_constraintLeft_toRightOf="@id/btn_play"
+
+            app:layout_constraintTop_toBottomOf="@id/tv_time" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <include-->
+    <!--        android:id="@+id/controlerMusic"-->
+    <!--        layout="@layout/show_play_pause_music" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

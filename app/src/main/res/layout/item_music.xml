@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_item"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/image_of_music"
+        android:layout_width="65dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:src="@drawable/hoanghon"
+        android:text="1"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nameMusic"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="35dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Name music"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nameSinger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="78dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginBottom="5dp"
+        android:text="Name music"
+        android:textColor="#000000"
+        android:textSize="18dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nameMusic" />
+
+    <ImageButton
+        android:id="@+id/tv_bacham"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:background="@drawable/ic_baseline_more_vert_24"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="@id/image_of_music"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EE723B"
+        android:layout_marginTop="13dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_nameSinger" />
+
+    <ImageView
+        android:id="@+id/imv_knowIsRunning"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_bar_chart_24"
+        android:visibility="gone"
+        android:layout_marginRight="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
